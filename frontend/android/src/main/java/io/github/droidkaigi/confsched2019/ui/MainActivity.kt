@@ -71,7 +71,8 @@ class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setSupportActionBar(binding.toolbar)
-        setupNavigation()
+            setupNavigation()
+
         systemStore.errorMsg.changed(this) { message ->
             val messageStr = when (message) {
                 is ErrorMessage.ResourceIdMessage -> getString(message.messageId)
