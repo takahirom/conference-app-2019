@@ -84,13 +84,20 @@ class MainActivity : DaggerAppCompatActivity() {
             if (!registered) {
                 userActionCreator.load()
             }
+
+
         }
+
+
     }
 
     private fun setupNavigation() {
+
         val appBarConfiguration = AppBarConfiguration(
+
             setOf(R.id.main, R.id.about, R.id.announce, R.id.setting),
             binding.drawerLayout
+
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
@@ -200,4 +207,10 @@ abstract class MainActivityModule {
         @ContributesAndroidInjector(modules = [MainActivityModule::class])
         abstract fun contributeMainActivity(): MainActivity
     }
+
 }
+
+
+
+
+
